@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo Variables y Media Queries</title>
+  <style>
+    /* Definimos variables */
+    :root {
+      --color-fondo: #f5f5f5;
+      --color-texto: #333;
+      --color-principal: #3498db;
+    }
+
+    body {
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header {
+      background-color: var(--color-principal);
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    /* Media query: para pantallas pequeñas */
+    @media (max-width: 600px) {
+      :root {
+        --color-fondo: #222;
+        --color-texto: #fff;
+        --color-principal: #e74c3c;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ejemplo de Variables y Media Queries</h1>
+  </header>
+
+  <p>Este texto usa variables de CSS para sus colores y fuente.</p>
+  <p>Prueba a reducir el tamaño de la ventana y el tamaño se adaptara.</p>
+</body>
+</html>
